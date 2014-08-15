@@ -2,12 +2,18 @@
 <html>
 	<head>
 		<title>Social Interaction</title>
-        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="style_dark.css" />
+        <style type="text/css" >
+        .graph * {
+          font-family:Arial !important;
+        }
+        </style>
         <script src="http://d3js.org/d3.v3.js"></script>
+
 	</head>
-<body>
+<body bgcolor=#000>
     <div id="clock" class=""></div>
-    <div id="graph" style="width:100%;margin:auto;height:790px"></div>
+    <div id="graph" style="width:100%;margin:auto;height:790px,font-family:arial"></div>
     
     <script src="dataHandler.js"></script>
     <script src="main.js"></script>

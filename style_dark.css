@@ -1,0 +1,49 @@
+﻿.link {
+    stroke: #00BFFF;
+    stroke-linecap: round;
+}
+
+.node text {
+    pointer-events: none;
+    font-family : arial, Sans-Serif;
+    font: arial 12px bold;
+    fill: #fff;
+
+}
+
+
+.inNode {
+    fill : steelblue;
+    stroke : gray;
+    stroke-width : 1px;
+}
+
+.popIn {
+    fill : #bbb;
+    stroke: none;
+}
+
+.popOut {
+    fill : none;
+    stroke: white;
+    stroke-width : 1px;
+}
+
+#clock{
+    position : absolute;
+    display : inline-block;
+    font-size: 4em;
+    font-family : Sans-Serif;
+    color: #fff;
+    opacity : 1;
+    padding : 5px 5px;
+    border-radius : 10px;
+    left : 1em;
+    top: 0.5em;
+    background-color: black;
+    z-index : 10;
+}
+
+#clock.video{
+    left : 37%;
+}

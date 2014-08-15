@@ -27,14 +27,14 @@ var init, // Call it only once (with the filepath as arguments) at the beggining
     logLevel = 'limited'; // You can choose 'all' / 'limited' (default 'limited')
     
     //Parameters - may be modified
-    var width = 1580,
-        height = 790,
+    var width = 1400,
+        height = 700,
         
         minLinkDistance = 200, // In pixel
         maxLinkDistance = 400, // In pixel
         
         minLinkSize = 0.5, // The stroke-width in pixel
-        maxLinkSize = 4, // The stroke-width in pixel
+        maxLinkSize = 2, // The stroke-width in pixel
         maxNodeSize = 50, // In pixel
         minNodeSize = 5, // In pixel
         poppingCircleSize = 75, // In pixel
@@ -49,7 +49,7 @@ var init, // Call it only once (with the filepath as arguments) at the beggining
         //Color by group if there is a group attribute,or use image
         useGroup = true,
         useImage = true,
-        imagePath = "user2.png",
+        imagePath = "user4.png",
         
         // Animated graph properties :
         animate = false, // To start animation
@@ -183,7 +183,7 @@ var init, // Call it only once (with the filepath as arguments) at the beggining
         
         node.selectAll("text")
             .attr("dx", function (d) {return 5 + getNodeSize(d) / 2; })
-            .text(function(d) { return d.id + " (" + d.currentW + ")"; });
+            .text(function(d) { return d.name + " (" + d.currentW + ")"; });
         
         var newNode = node.enter();
         
@@ -216,7 +216,7 @@ var init, // Call it only once (with the filepath as arguments) at the beggining
         newNode.append("text")
               .attr("dx", function (d) {return 5 + getNodeSize(d) / 2; })
               .attr("dy", ".35em")
-              .text(function(d) { return d.id + " (" + d.currentW + ")"; });
+              .text(function(d) { return d.name + " (" + d.currentW + ")"; });
         
         if(animationOnChanging){
             newNode.append("circle").attr("class","popIn")

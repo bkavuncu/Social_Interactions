@@ -82,7 +82,7 @@ var csv = true,
         data.nodes = JSON.parse(file1);
         data.links = JSON.parse(file2);
         
-        data.nodes.forEach(function (d) {d.id = +d.id; d.w = +d.w; d.currentW = 0; d.group = +d.group;});
+        data.nodes.forEach(function (d) {d.id = +d.id; d.w = +d.w; d.currentW = 0; d.group = +d.group; d.name = d.name;});
         data.links.forEach(function (d) {d.timestamps.forEach(function(t,i){d.timestamps[i] = +d.timestamps[i];}); d.id = +d.id || idCounter++; d.sourceId = +d.sourceId; d.currentW = 0; d.targetId = +d.targetId;});
         
         return data;
